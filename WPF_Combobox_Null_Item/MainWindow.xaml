@@ -6,26 +6,11 @@
         xmlns:local="clr-namespace:WPF_Combobox_Null_Item"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525"
-       
         >
-
-    <GroupBox Header="test">
-        <StackPanel>
-            <ComboBox ItemsSource="{Binding Items}"
-             
-              DisplayMemberPath="Name" 
-              Height="21" 
-              SelectedItem="{Binding SelectedItem}"/>
-            <TextBlock Text="{Binding SelectedItem.Name}"/>
-
-
-            <ComboBox ItemsSource="{Binding  Items, Converter={StaticResource ComboBoxEmptyItemConverter}}" 
+    <StackPanel>
+        <ComboBox ItemsSource="{Binding  Items, Converter={StaticResource ComboBoxEmptyItemConverter}}" 
               SelectedItem="{Binding SelectedItem, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource ComboBoxEmptyItemConverter}}"       
-              
               DisplayMemberPath="Name" />
-
-            <TextBlock Text="{Binding SelectedItem.Name}"/>
-        </StackPanel>
-    </GroupBox>
-
+        <TextBlock Text="{Binding SelectedItem.Name}"/>
+    </StackPanel>
 </Window>
