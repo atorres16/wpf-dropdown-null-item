@@ -1,0 +1,11 @@
+﻿<Application x:Class="WPF_Combobox_Null_Item.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WPF_Combobox_Null_Item"
+             StartupUri="MainWindow.xaml"
+             xmlns:Conv="clr-namespace:WPF_Combobox_Null_Item.Converters"
+             >
+    <Application.Resources>
+        <Conv:ComboBoxEmptyItemConverter x:Key="ComboBoxEmptyItemConverter"/>
+    </Application.Resources>
+</Application>
